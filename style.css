@@ -1,0 +1,1565 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Whole page */
+
+body {
+    min-height: 100vh;
+
+    font-family: "Segoe UI", Arial, sans-serif;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    background:
+        radial-gradient(circle at top left, #ffd6e7, transparent 40%),
+        radial-gradient(circle at bottom right, #ffd9b8, transparent 40%),
+        linear-gradient(135deg, #fff0f5, #ffe8ef);
+
+    color: #4a3040;
+}
+
+
+/* Main section */
+
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 20px;
+}
+
+
+/* Main glass card */
+
+.card {
+    width: 90%;
+
+    max-width: 650px;
+
+    padding: 55px 40px;
+
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.65);
+
+    border: 1px solid rgba(255, 255, 255, 0.8);
+
+    border-radius: 35px;
+
+    backdrop-filter: blur(15px);
+
+    box-shadow:
+        0 20px 60px rgba(150, 60, 100, 0.15);
+
+    animation: appear 1.2s ease;
+}
+
+
+/* Rakhi icon */
+
+.rakhi {
+    font-size: 65px;
+
+    margin-bottom: 20px;
+
+    animation: float 3s ease-in-out infinite;
+}
+
+
+/* Small heading */
+
+.small-title {
+    font-size: 13px;
+
+    letter-spacing: 4px;
+
+    font-weight: 600;
+
+    color: #a45b78;
+
+    margin-bottom: 10px;
+}
+
+
+/* Main heading */
+
+h1 {
+    font-size: 52px;
+
+    font-weight: 700;
+
+    color: #c43d6b;
+
+    margin-bottom: 20px;
+}
+
+
+/* Main message */
+
+.message {
+    font-size: 20px;
+
+    line-height: 1.7;
+
+    color: #654456;
+
+    max-width: 500px;
+
+    margin: auto;
+}
+
+
+/* Decorative divider */
+
+.divider {
+    margin: 25px 0;
+
+    font-size: 20px;
+
+    letter-spacing: 8px;
+}
+
+
+/* Subtitle */
+
+.subtitle {
+    font-size: 17px;
+
+    line-height: 1.6;
+
+    color: #775568;
+
+    margin-bottom: 30px;
+}
+
+
+/* Button */
+
+button {
+    border: none;
+
+    padding: 16px 32px;
+
+    border-radius: 50px;
+
+    background: #c43d6b;
+
+    color: white;
+
+    font-size: 17px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    box-shadow: 0 8px 25px rgba(196, 61, 107, 0.3);
+
+    transition: all 0.3s ease;
+}
+
+
+/* Button hover */
+
+button:hover {
+    transform: translateY(-4px) scale(1.04);
+
+    box-shadow: 0 12px 30px rgba(196, 61, 107, 0.4);
+}
+
+
+/* Bottom text */
+
+.bottom-text {
+    margin-top: 25px;
+
+    font-size: 13px;
+
+    color: #9a7182;
+}
+
+
+/* Floating hearts */
+
+.hearts span {
+    position: absolute;
+
+    bottom: -50px;
+
+    font-size: 22px;
+
+    animation: hearts 10s linear infinite;
+
+    opacity: 0.7;
+}
+
+
+/* Different positions */
+
+.hearts span:nth-child(1) {
+    left: 5%;
+    animation-delay: 0s;
+}
+
+.hearts span:nth-child(2) {
+    left: 18%;
+    animation-delay: 2s;
+}
+
+.hearts span:nth-child(3) {
+    left: 32%;
+    animation-delay: 5s;
+}
+
+.hearts span:nth-child(4) {
+    left: 48%;
+    animation-delay: 1s;
+}
+
+.hearts span:nth-child(5) {
+    left: 65%;
+    animation-delay: 4s;
+}
+
+.hearts span:nth-child(6) {
+    left: 78%;
+    animation-delay: 7s;
+}
+
+.hearts span:nth-child(7) {
+    left: 88%;
+    animation-delay: 3s;
+}
+
+.hearts span:nth-child(8) {
+    left: 95%;
+    animation-delay: 6s;
+}
+
+
+/* Card entrance */
+
+@keyframes appear {
+
+    from {
+        opacity: 0;
+
+        transform: translateY(30px) scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateY(0) scale(1);
+    }
+
+}
+
+
+/* Rakhi floating */
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+}
+
+
+/* Hearts floating */
+
+@keyframes hearts {
+
+    0% {
+        transform: translateY(0) rotate(0deg);
+
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 0.7;
+    }
+
+    90% {
+        opacity: 0.7;
+    }
+
+    100% {
+        transform: translateY(-110vh) rotate(360deg);
+
+        opacity: 0;
+    }
+
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .card {
+        padding: 40px 25px;
+    }
+
+    .rakhi {
+        font-size: 50px;
+    }
+
+    h1 {
+        font-size: 38px;
+    }
+
+    .message {
+        font-size: 17px;
+    }
+
+    .subtitle {
+        font-size: 15px;
+    }
+
+    button {
+        font-size: 15px;
+
+        padding: 14px 24px;
+    }
+
+}
+/* ================================= */
+/* SURPRISE SCREEN */
+/* ================================= */
+
+.surprise {
+
+    min-height: 100vh;
+
+    width: 100%;
+
+    display: none;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    padding: 30px;
+
+    background:
+        radial-gradient(
+            circle at top right,
+            #ffd1e1,
+            transparent 40%
+        ),
+        radial-gradient(
+            circle at bottom left,
+            #ffe0bd,
+            transparent 40%
+        ),
+        linear-gradient(
+            135deg,
+            #fff0f5,
+            #ffe8ef
+        );
+
+}
+
+
+/* Content */
+
+.surprise-content {
+
+    max-width: 750px;
+
+    animation: surpriseAppear 1.5s ease;
+
+}
+
+
+/* Large Rakhi */
+
+.big-rakhi {
+
+    font-size: 90px;
+
+    margin-bottom: 20px;
+
+    animation: float 3s ease-in-out infinite;
+
+}
+
+
+/* Main heading */
+
+.surprise h2 {
+
+    font-size: 48px;
+
+    color: #c43d6b;
+
+    margin-top: 10px;
+
+    margin-bottom: 20px;
+
+}
+
+
+/* Emotional message */
+
+.emotional-message {
+
+    font-size: 20px;
+
+    line-height: 1.8;
+
+    color: #654456;
+
+    max-width: 650px;
+
+    margin: auto;
+
+}
+
+
+/* Important sentence */
+
+.emotional-message strong {
+
+    color: #c43d6b;
+
+    font-size: 23px;
+
+}
+
+
+/* Distance message */
+
+.distance-message {
+
+    font-size: 18px;
+
+    line-height: 1.7;
+
+    color: #775568;
+
+    margin: 30px auto;
+
+    max-width: 600px;
+
+}
+
+
+/* Surprise animation */
+
+@keyframes surpriseAppear {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(40px) scale(0.95);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0) scale(1);
+
+    }
+
+}
+@media (max-width: 600px) {
+
+    .surprise {
+
+        padding: 25px;
+
+    }
+
+
+    .big-rakhi {
+
+        font-size: 65px;
+
+    }
+
+
+    .surprise h2 {
+
+        font-size: 34px;
+
+    }
+
+
+    .emotional-message {
+
+        font-size: 17px;
+
+    }
+
+
+    .emotional-message strong {
+
+        font-size: 19px;
+
+    }
+
+
+    .distance-message {
+
+        font-size: 16px;
+
+    }
+
+}
+
+.message-screen {
+
+    min-height: 100vh;
+
+    width: 100%;
+
+    display: none;
+
+    justify-content: center;
+
+    align-items: flex-start;
+
+    text-align: center;
+
+    padding: 60px 20px;
+
+    background:
+        radial-gradient(
+            circle at top left,
+            #ffd6e7,
+            transparent 40%
+        ),
+        radial-gradient(
+            circle at bottom right,
+            #ffe0bd,
+            transparent 40%
+        ),
+        linear-gradient(
+            135deg,
+            #fff0f5,
+            #ffe8ef
+        );
+
+    overflow-y: auto;
+}
+
+
+/* Main container */
+
+.message-container {
+
+    width: 100%;
+
+    max-width: 850px;
+
+    animation: messageAppear 1.2s ease;
+
+}
+
+
+/* Heart */
+
+.message-heart {
+
+    font-size: 65px;
+
+    margin-bottom: 15px;
+
+    animation: heartbeat 1.5s infinite;
+}
+
+
+/* Heading */
+
+.message-screen h2 {
+
+    font-size: 48px;
+
+    color: #c43d6b;
+
+    margin: 10px 0 20px;
+
+}
+
+
+/* Letter */
+
+.letter {
+
+    max-width: 700px;
+
+    margin: auto;
+
+    font-size: 18px;
+
+    line-height: 1.9;
+
+    color: #654456;
+
+}
+
+
+/* Important sentence */
+
+.letter strong {
+
+    color: #c43d6b;
+
+}
+
+
+/* Special line */
+
+.special-line {
+
+    font-size: 24px;
+
+}
+
+
+/* Brother cards */
+
+.brother-cards {
+
+    display: flex;
+
+    gap: 25px;
+
+    justify-content: center;
+
+    margin: 45px auto;
+
+    max-width: 750px;
+
+}
+
+
+/* Individual card */
+
+.brother-card {
+
+    flex: 1;
+
+    padding: 30px 25px;
+
+    background: rgba(255, 255, 255, 0.7);
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 15px 40px rgba(150, 60, 100, 0.12);
+
+    border: 1px solid rgba(255,255,255,0.8);
+
+    transition: 0.3s ease;
+}
+
+
+/* Card hover */
+
+.brother-card:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 20px 45px rgba(150, 60, 100, 0.2);
+
+}
+
+
+/* Brother icon */
+
+.brother-icon {
+
+    font-size: 50px;
+
+    margin-bottom: 15px;
+}
+
+
+/* Brother name */
+
+.brother-card h3 {
+
+    color: #c43d6b;
+
+    font-size: 23px;
+
+    margin-bottom: 12px;
+
+}
+
+
+/* Brother message */
+
+.brother-card p {
+
+    color: #775568;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+
+}
+
+
+/* Closing message */
+
+.closing-message {
+
+    font-size: 19px;
+
+    line-height: 1.8;
+
+    color: #654456;
+
+    margin: 30px auto 35px;
+
+}
+
+
+/* Closing bold */
+
+.closing-message strong {
+
+    color: #c43d6b;
+
+    font-size: 22px;
+
+}
+
+
+/* Entrance animation */
+
+@keyframes messageAppear {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(40px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+
+/* Heartbeat */
+
+@keyframes heartbeat {
+
+    0% {
+        transform: scale(1);
+    }
+
+    15% {
+        transform: scale(1.15);
+    }
+
+    30% {
+        transform: scale(1);
+    }
+
+    45% {
+        transform: scale(1.15);
+    }
+
+    60% {
+        transform: scale(1);
+    }
+
+}
+
+
+/* Mobile */
+
+@media (max-width: 650px) {
+
+    .message-screen {
+
+        padding: 45px 18px;
+
+    }
+
+
+    .message-screen h2 {
+
+        font-size: 35px;
+
+    }
+
+
+    .message-heart {
+
+        font-size: 50px;
+
+    }
+
+
+    .letter {
+
+        font-size: 16px;
+
+        line-height: 1.8;
+
+    }
+
+
+    .brother-cards {
+
+        flex-direction: column;
+
+        margin-top: 35px;
+
+    }
+
+
+    .brother-card {
+
+        width: 100%;
+
+    }
+
+
+    .closing-message {
+
+        font-size: 17px;
+
+    }
+
+}
+.card-label {
+
+    font-size: 11px !important;
+
+    letter-spacing: 2px;
+
+    color: #a45b78 !important;
+
+    margin-bottom: 8px !important;
+
+}
+
+
+.brother-card h3 {
+
+    font-size: 24px;
+
+    margin-bottom: 15px;
+
+    color: #c43d6b;
+
+}
+
+
+.brother-card {
+
+    min-height: 330px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: flex-start;
+
+}
+
+
+.brother-icon {
+
+    animation: float 3s ease-in-out infinite;
+
+}
+
+.memories-screen {
+
+    display: none;
+
+    min-height: 100vh;
+
+    width: 100%;
+
+    padding: 70px 20px;
+
+    background:
+        radial-gradient(
+            circle at top left,
+            #ffd6e7,
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at bottom right,
+            #ffe0bd,
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #fff5f8,
+            #ffeef3
+        );
+
+}
+
+
+.memories-container {
+
+    width: 100%;
+
+    max-width: 900px;
+
+    margin: auto;
+
+    text-align: center;
+
+}
+
+
+/* Heading */
+
+.memory-heading {
+
+    margin-bottom: 45px;
+
+}
+
+
+.camera-icon {
+
+    font-size: 55px;
+
+    margin-bottom: 15px;
+
+    animation: float 3s ease-in-out infinite;
+
+}
+
+
+.memories-screen h2 {
+
+    font-size: 52px;
+
+    color: #c43d6b;
+
+    margin: 10px 0 15px;
+
+}
+
+
+.memory-intro {
+
+    font-size: 18px;
+
+    line-height: 1.7;
+
+    color: #775568;
+
+    max-width: 600px;
+
+    margin: auto;
+
+}
+
+
+/* Photo cards */
+
+.photo-card {
+
+    background: rgba(255, 255, 255, 0.75);
+
+    border-radius: 25px;
+
+    padding: 12px;
+
+    margin-bottom: 25px;
+
+    box-shadow:
+        0 15px 40px rgba(150, 60, 100, 0.13);
+
+    transition: transform 0.4s ease,
+                box-shadow 0.4s ease;
+
+}
+
+
+.photo-card:hover {
+
+    transform: translateY(-7px) rotate(0.5deg);
+
+    box-shadow:
+        0 25px 55px rgba(150, 60, 100, 0.2);
+
+}
+
+
+.photo-card img {
+
+    width: 100%;
+
+    display: block;
+
+    border-radius: 18px;
+
+    object-fit: cover;
+
+}
+
+
+.photo-large {
+
+    max-width: 700px;
+
+    margin-left: auto;
+
+    margin-right: auto;
+
+}
+
+
+/* Photo captions */
+
+.photo-card p {
+
+    margin: 15px 10px 10px;
+
+    color: #775568;
+
+    font-size: 16px;
+
+    line-height: 1.5;
+
+    font-style: italic;
+
+}
+
+
+/* Two photo row */
+
+.photo-row {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 25px;
+
+    max-width: 850px;
+
+    margin: auto;
+
+}
+
+
+.photo-row .photo-card {
+
+    margin-bottom: 25px;
+
+}
+
+
+/* Music */
+
+.music-box {
+
+    max-width: 600px;
+
+    margin: 55px auto 40px;
+
+    padding: 35px 25px;
+
+    background: rgba(255, 255, 255, 0.8);
+
+    border-radius: 30px;
+
+    box-shadow:
+        0 15px 40px rgba(150, 60, 100, 0.13);
+
+}
+
+
+.music-icon {
+
+    font-size: 45px;
+
+    margin-bottom: 10px;
+
+}
+
+
+.music-box h3 {
+
+    font-size: 25px;
+
+    color: #c43d6b;
+
+    margin-bottom: 10px;
+
+}
+
+
+.music-box p {
+
+    color: #775568;
+
+    margin-bottom: 20px;
+
+    line-height: 1.6;
+
+}
+
+
+.music-box audio {
+
+    width: 100%;
+
+}
+
+
+/* Mobile */
+
+@media (max-width: 650px) {
+
+    .memories-screen {
+
+        padding: 50px 15px;
+
+    }
+
+
+    .memories-screen h2 {
+
+        font-size: 38px;
+
+    }
+
+
+    .memory-intro {
+
+        font-size: 16px;
+
+    }
+
+
+    .photo-row {
+
+        grid-template-columns: 1fr;
+
+        gap: 0;
+
+    }
+
+
+    .photo-card {
+
+        border-radius: 20px;
+
+    }
+
+
+    .photo-card img {
+
+        border-radius: 14px;
+
+    }
+
+
+    .music-box {
+
+        padding: 30px 20px;
+
+    }
+
+}
+
+.final-screen {
+
+    display: none;
+
+    position: relative;
+
+    min-height: 100vh;
+
+    width: 100%;
+
+    padding: 70px 20px;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at top left,
+            #ffd6e7,
+            transparent 40%
+        ),
+        radial-gradient(
+            circle at bottom right,
+            #ffe0bd,
+            transparent 40%
+        ),
+        linear-gradient(
+            135deg,
+            #fff0f5,
+            #ffe8ef
+        );
+}
+
+
+.final-content {
+
+    position: relative;
+
+    z-index: 5;
+
+    max-width: 750px;
+
+    margin: auto;
+
+    animation: finalAppear 1.5s ease;
+}
+
+
+/* Final Rakhi */
+
+.final-rakhi {
+
+    font-size: 80px;
+
+    margin-bottom: 20px;
+
+    animation: float 3s ease-in-out infinite;
+}
+
+
+/* Heading */
+
+.final-screen h2 {
+
+    font-size: 50px;
+
+    color: #c43d6b;
+
+    margin: 10px 0 20px;
+}
+
+
+/* Final letter */
+
+.final-letter {
+
+    max-width: 650px;
+
+    margin: 0 auto;
+
+    color: #654456;
+
+    font-size: 18px;
+
+    line-height: 1.9;
+}
+
+
+.final-letter p {
+
+    margin-bottom: 22px;
+}
+
+
+/* Special message */
+
+.special-final {
+
+    color: #c43d6b;
+
+    font-size: 25px;
+
+    font-weight: 700;
+}
+
+
+/* Distance message */
+
+.distance-final {
+
+    color: #c43d6b;
+
+    font-size: 27px;
+
+    font-weight: 700;
+}
+
+
+/* Names */
+
+.final-names {
+
+    max-width: 500px;
+
+    margin: 35px auto;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+
+.final-names div {
+
+    padding: 14px 20px;
+
+    border-radius: 50px;
+
+    background: rgba(255,255,255,0.7);
+
+    color: #c43d6b;
+
+    font-size: 18px;
+
+    font-weight: 600;
+
+    box-shadow:
+        0 8px 25px rgba(150,60,100,0.1);
+}
+
+
+/* Divider */
+
+.final-divider {
+
+    color: #c43d6b;
+
+    font-size: 18px;
+
+    margin: 30px 0;
+}
+
+
+/* Happy Rakhi */
+
+.final-rakhi-text {
+
+    font-size: 35px;
+
+    color: #c43d6b;
+
+    margin-bottom: 15px;
+}
+
+
+/* Subtitle */
+
+.final-subtitle {
+
+    max-width: 600px;
+
+    margin: auto;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+
+    color: #775568;
+}
+
+
+/* Big heart */
+
+.big-heart {
+
+    font-size: 70px;
+
+    margin: 30px 0;
+
+    animation: heartbeat 1.5s infinite;
+}
+
+
+/* Footer */
+
+.made-with-love {
+
+    font-size: 13px;
+
+    line-height: 1.7;
+
+    color: #9a7182;
+}
+
+
+/* Final entrance */
+
+@keyframes finalAppear {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(50px) scale(0.95);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0) scale(1);
+
+    }
+
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .final-screen {
+
+        padding: 50px 18px;
+
+    }
+
+
+    .final-rakhi {
+
+        font-size: 60px;
+
+    }
+
+
+    .final-screen h2 {
+
+        font-size: 36px;
+
+    }
+
+
+    .final-letter {
+
+        font-size: 16px;
+
+    }
+
+
+    .special-final {
+
+        font-size: 21px;
+
+    }
+
+
+    .distance-final {
+
+        font-size: 23px;
+
+    }
+
+
+    .final-rakhi-text {
+
+        font-size: 28px;
+
+    }
+
+
+    .final-subtitle {
+
+        font-size: 15px;
+
+    }
+
+
+    .big-heart {
+
+        font-size: 55px;
+
+    }
+
+}
+
+#confettiContainer {
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    pointer-events: none;
+
+    overflow: hidden;
+
+}
+
+
+@keyframes fall {
+
+    0% {
+
+        transform:
+            translateY(-50px)
+            rotate(0deg);
+
+        opacity: 0;
+
+    }
+
+
+    10% {
+
+        opacity: 1;
+
+    }
+
+
+    100% {
+
+        transform:
+            translateY(110vh)
+            rotate(360deg);
+
+        opacity: 0;
+
+    }
+
+}
